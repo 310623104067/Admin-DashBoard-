@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Royal - Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Royal</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#booking">Book A Room</a></li>
+                <li><a href="#guests">Guest List</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h2>Welcome to Hotel Royal</h2>
+            <p>Your comfort is our priority. Explore our rooms and services.</p>
+            <button class="cta-button" onclick="location.href='#booking'">Book Now</button>
+        </section>
+
+        <section id="rooms" class="section-container">
+            <h2>Our Rooms</h2>
+            <div class="room-gallery">
+                </div>
+        </section>
+
+        <section id="booking" class="section-container">
+            <h2>Book Your Stay</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="check-in">Check-in Date:</label>
+                    <input type="date" id="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check-out Date:</label>
+                    <input type="date" id="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="room-type">Room Type:</label>
+                    <select id="room-type" required>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="num-guests">Number of Guests:</label>
+                    <input type="number" id="num-guests" min="1" value="1" required>
+                </div>
+                <button type="submit" class="cta-button">Check Availability & Book</button>
+            </form>
+            <div id="booking-status"></div>
+        </section>
+
+        <section id="guests" class="section-container">
+            <h2>Current Guests (Simulated)</h2>
+            <div id="guest-list-container">
+                <p id="no-guests-message">No guests currently checked in.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section-container">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to us!</p>
+            <address>
+                Hotel Royal<br>
+                123 Grand Street, Cityville, Country<br>
+                Phone: +1 (123) 456-7890<br>
+                Email: info@hotelroyal.com
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hotel Royal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
